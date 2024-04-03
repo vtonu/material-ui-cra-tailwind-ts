@@ -1,4 +1,4 @@
-🎪 React App, MUI, TailwindCSS & TypeScript Boilerplate Template.
+🎪 React App, MUI, TailwindCSS & TypeScript Boilerplate Template. v0.1
 
 # Material UI - CRA example with Tailwind CSS in TypeScript
 
