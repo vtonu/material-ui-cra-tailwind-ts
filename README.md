@@ -1,6 +1,6 @@
-🎪 React App, MUI, TailwindCSS & TypeScript Boilerplate Template. v0.1
+🎪 PDF Editor (React App, MUI, TailwindCSS & TypeScript Boilerplate Template.)
 
-![image](https://github.com/vtonu/material-ui-cra-tailwind-ts/assets/56773210/be5f8542-5f53-46d7-88d0-ab85c4894910)
+![image](https://github.com/vtonu/material-ui-cra-tailwind-ts/assets/56773210/8b2396af-0560-42bb-9cea-4f220d8ca6fb)
 
 # Material UI - CRA example with Tailwind CSS in TypeScript
 
