@@ -7,6 +7,7 @@ import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
+import OutlinedCard from './pdfViewerCard';
 
 const VisuallyHiddenInput = styled('input')({
   clip: 'rect(0 0 0 0)',
@@ -71,6 +72,7 @@ export default function App() {
               startIcon={<PictureAsPdfIcon />}>
               View PDF
             </Button>
+            <OutlinedCard />
           </Box>
         </div>
       </Container>
