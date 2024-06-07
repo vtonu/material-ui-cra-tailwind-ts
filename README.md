@@ -1,19 +1,8 @@
-🎪 PDF Editor (React App, MUI, TailwindCSS & TypeScript Boilerplate Template.)
+🎪 PDF Editor v0.1
 
 ![image](https://github.com/vtonu/material-ui-cra-tailwind-ts/assets/56773210/8b2396af-0560-42bb-9cea-4f220d8ca6fb)
 
-# Material UI - CRA example with Tailwind CSS in TypeScript
-
 ## How to use
-
-Download the example [or clone the repo](https://github.com/mui/material-ui):
-
-<!-- #default-branch-switch -->
-
-```bash
-curl https://codeload.github.com/mui/material-ui/tar.gz/master | tar -xz --strip=2 material-ui-master/examples/material-ui-cra-tailwind-ts
-cd material-ui-cra-tailwind-ts
-```
 
 Install it and run:
 
@@ -21,12 +10,6 @@ Install it and run:
 npm install
 npm start
 ```
-
-or:
-
-<!-- #default-branch-switch -->
-
-[![Edit on StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/mui/material-ui/tree/master/examples/material-ui-cra-tailwind-ts)
 
 ## The idea behind the example
 
