@@ -1,13 +1,16 @@
 import * as React from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import Link from '@mui/material/Link';
 import Button from '@mui/material/Button';
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import OutlinedCard from './pdfViewerCard';
+import { deepOrange } from '@mui/material/colors';
+import { pink } from '@mui/material/colors';
+import Checkbox from '@mui/material/Checkbox';
+import { Label } from '@mui/icons-material';
 
 const VisuallyHiddenInput = styled('input')({
   clip: 'rect(0 0 0 0)',
@@ -21,24 +24,10 @@ const VisuallyHiddenInput = styled('input')({
   width: 1,
 });
 
-function Copyright() {
-  return (
-    <Box sx={{ position: 'fixed', bottom: 2, width: '100%' }}>
-      <Typography variant="body2" color="text.secondary" align="center">
-        {'Copyright © '}
-        <Link color="inherit" href="https://github.com/vtonu">
-          Victor Tonu
-        </Link>{' '}
-        {new Date().getFullYear()}
-        {'.'}
-      </Typography>
-    </Box>
-  );
-}
-
 export default function App() {
   return (
     <body>
+      <OutlinedCard />
       <Container
         maxWidth="lg"
         sx={{
@@ -46,37 +35,63 @@ export default function App() {
           borderRadius: '4px',
           display: 'flex',
           justifyContent: 'center',
-          backgroundColor: 'hotpink',
+          backgroundColor: 'pink',
         }}
         className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_22px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]">
-        <div className="my-2 text-center">
+        <div className="my-2 text-center ">
           <Typography variant="h4" component="h1">
             <h2>PDF Editor</h2>
-            <h6>React App using MUI, TailwindCSS & TypeScript</h6>
+            <h6>
+              Edit, View & Clear your PDF File! <br></br>v0.2
+            </h6>
           </Typography>
           <Box sx={{ display: 'grid', gap: 2 }}>
             <Button
+              disableElevation
               component="label"
               role={undefined}
               variant="contained"
-              color="secondary"
               tabIndex={-1}
-              startIcon={<CloudUploadIcon />}>
+              startIcon={<CloudUploadIcon />}
+              sx={{
+                bgcolor: deepOrange[500],
+                textTransform: 'none',
+                '&:hover': {
+                  bgcolor: deepOrange[700],
+                },
+              }}>
               Upload file
               <VisuallyHiddenInput type="file" />
             </Button>
             <Button
+              disableElevation
               variant="contained"
-              color="secondary"
-              tabIndex={-1}
-              startIcon={<PictureAsPdfIcon />}>
-              View PDF
+              startIcon={<PictureAsPdfIcon />}
+              sx={{
+                bgcolor: deepOrange[500],
+                textTransform: 'none',
+                '&:hover': {
+                  bgcolor: deepOrange[700],
+                },
+              }}>
+              Edit PDF
             </Button>
-            <OutlinedCard />
+          </Box>
+          <Box className="flex items-center justify-center">
+            <Typography sx={{ fontSize: 14, fontWeight: 400 }}>Clear PDF Checkmarks</Typography>
+            <Checkbox
+              defaultChecked
+              disableRipple
+              sx={{
+                color: deepOrange[800],
+                '&.Mui-checked': {
+                  color: deepOrange[600],
+                },
+              }}
+            />
           </Box>
         </div>
       </Container>
-      <Copyright />
     </body>
   );
 }
