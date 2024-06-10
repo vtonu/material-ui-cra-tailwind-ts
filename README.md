@@ -1,6 +1,5 @@
-🎪 PDF Editor v0.1
-
-![image](https://github.com/vtonu/material-ui-cra-tailwind-ts/assets/56773210/8b2396af-0560-42bb-9cea-4f220d8ca6fb)
+🎪 PDF Editor v0.2
+![image](https://github.com/vtonu/material-ui-cra-tailwind-ts/assets/56773210/20d5b353-82e4-45f9-a2d1-dfcdf6cb5bd4)
 
 ## How to use
 
