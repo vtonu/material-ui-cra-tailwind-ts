@@ -8,9 +8,8 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import OutlinedCard from './pdfViewerCard';
 import { deepOrange } from '@mui/material/colors';
-import { pink } from '@mui/material/colors';
 import Checkbox from '@mui/material/Checkbox';
-import { Label } from '@mui/icons-material';
+import CircularProgress from './terms';
 
 const VisuallyHiddenInput = styled('input')({
   clip: 'rect(0 0 0 0)',
@@ -25,9 +24,23 @@ const VisuallyHiddenInput = styled('input')({
 });
 
 export default function App() {
+  const [loading, setLoading] = React.useState(false);
+  const [file, setFile] = React.useState<File | null>(null);
+
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (event.target.files && event.target.files[0]) {
+      setLoading(true);
+      setFile(event.target.files[0]);
+      setTimeout(() => {
+        setLoading(false);
+      }, 5000); // Wait for 5 seconds
+    }
+  };
+
   return (
     <body>
       <OutlinedCard />
+
       <Container
         maxWidth="lg"
         sx={{
@@ -37,13 +50,14 @@ export default function App() {
           justifyContent: 'center',
           backgroundColor: 'pink',
         }}
-        className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_22px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]">
+        className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_22px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_90%,transparent_110%)]">
         <div className="my-2 text-center ">
           <Typography variant="h4" component="h1">
             <h2>PDF Editor</h2>
             <h6>
               Edit, View & Clear your PDF File! <br></br>v0.2
             </h6>
+            <CircularProgress />
           </Typography>
           <Box sx={{ display: 'grid', gap: 2 }}>
             <Button
@@ -78,7 +92,7 @@ export default function App() {
             </Button>
           </Box>
           <Box className="flex items-center justify-center">
-            <Typography sx={{ fontSize: 14, fontWeight: 400 }}>Clear PDF Checkmarks</Typography>
+            <Typography sx={{ fontSize: 14, fontWeight: 400 }}>Remove checkmarks</Typography>
             <Checkbox
               defaultChecked
               disableRipple
