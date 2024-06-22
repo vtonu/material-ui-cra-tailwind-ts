@@ -1,5 +1,5 @@
-🎪 PDF Editor v0.2
-![image](https://github.com/vtonu/material-ui-cra-tailwind-ts/assets/56773210/20d5b353-82e4-45f9-a2d1-dfcdf6cb5bd4)
+🎪 React App, MUI, TailwindCSS & TypeScript Boilerplate Template (v0.3)
+![image](https://github.com/vtonu/material-ui-cra-tailwind-ts/assets/56773210/5ab73e22-71aa-4bd5-8e93-aeca46ba3671)
 
 ## How to use
 
