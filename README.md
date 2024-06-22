@@ -1,4 +1,5 @@
 🎪 React App, MUI, TailwindCSS & TypeScript Boilerplate Template (v0.4)
+
 ![image](https://github.com/vtonu/ShadCN_UI/assets/56773210/14e26409-b2ac-4315-b681-10625f884616)
 
 ## How to use
